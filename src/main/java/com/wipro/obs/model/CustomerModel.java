@@ -28,5 +28,4 @@ public class CustomerModel {
     private Long accountNUmber;
     private Long cardNumber;
     private String password;
-    private String matchingpassword;
 }

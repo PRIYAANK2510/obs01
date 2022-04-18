@@ -17,5 +17,4 @@ public class AdminAccountDetails {
     private String name;
     private String mobileNumber;
     private String gender;
-    private String password;
 }

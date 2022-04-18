@@ -15,5 +15,4 @@ public class AdminModel {
     private String mobileNumber;
     private String gender;
     private String password;
-    private String matchingpassword;
 }

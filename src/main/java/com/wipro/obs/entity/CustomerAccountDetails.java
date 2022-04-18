@@ -35,8 +35,5 @@ public class CustomerAccountDetails {
     private Long accountNumber;
     @Column(unique = true)
     private Long cardNumber;
-    private String password;
-
-
 
 }

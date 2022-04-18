@@ -15,5 +15,4 @@ public class UserCredentials {
     private String userId;
     private String userType;
     private String password;
-    private Boolean loginStatus;
 }
