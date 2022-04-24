@@ -6,7 +6,6 @@ import com.wipro.obs.model.CustomerModel;
 import com.wipro.obs.repository.CustomerAccountDetailsRepository;
 import com.wipro.obs.repository.UserCredentialsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,8 +17,6 @@ public class CustomerServiceImpl implements CustomerService{
     @Autowired
     private UserCredentialsRepository userCredentialsRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
     @Override
     public CustomerAccountDetails registerCustomer(CustomerModel customerModel) {
@@ -42,7 +39,7 @@ public class CustomerServiceImpl implements CustomerService{
         customerAccountDetails.setCardNumber(customerModel.getCardNumber());
 
         userCredentials.setUserId(customerModel.getCustomerID());
-        userCredentials.setPassword(passwordEncoder.encode(customerModel.getPassword()));
+        userCredentials.setPassword(customerModel.getPassword());
         userCredentials.setUserType("USER");
 
         userCredentialsRepository.save(userCredentials);

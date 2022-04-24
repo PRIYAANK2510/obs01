@@ -4,17 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../static/css/login_style.css" type="text/css" th:href="@{/login_style.css}">
+    <link rel="stylesheet" href="../static/css/login_style.css" type="text/css" th:href="@{/login_style.css}" media="all">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
-<body>
+<body style="background-image: url('../static/images/login.jpg');">
 <div class="wrapper">
     <header>XYZ BANK</header>
     <header>Login</header>
-    <form action="#">
-        <div class="field email">
+    <form th:action="@{/login}" class="form" method="post">
+        <div class="field userID">
             <div class="input-area">
-                <input type="text" placeholder="Email Address">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="UserID">
                 <i class="icon fas fa-envelope"></i>
                 <i class="error error-icon fas fa-exclamation-circle"></i>
             </div>
@@ -22,18 +23,18 @@
         </div>
         <div class="field password">
             <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
                 <input type="password" placeholder="Password">
                 <i class="icon fas fa-lock"></i>
                 <i class="error error-icon fas fa-exclamation-circle"></i>
             </div>
             <div class="error error-txt">Password can't be blank</div>
         </div>
-        <div class="pass-txt"><a href="#">Forgot password?</a></div>
-        <input type="submit" value="Login">
+        <input type="submit" id="login-button" value="Login">
     </form>
 </div>
 
-<script src="" th:src="@{/js/login_script.js}"></script>
+<script src="../static/js/login_script.js" th:src="@{/js/login_script.js}"></script>
 
 </body>
 </html>

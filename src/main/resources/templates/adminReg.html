@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Registration</title>
+    <link rel="stylesheet" href="../static/css/adminregistration_style.css" type="text/css" th:href="@{/registration_style.css}" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <header>Admin Registration</header>
+    <form th:action="@{/admin}" class="form" method="post">
+        <div class="field adminID">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="AdminID">
+            </div>
+            <div class="error error-txt">AdminID can't be blank</div>
+        </div>
+        <div class="field name">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="error error-txt">Name can't be blank</div>
+        </div>
+        <div class="field mobile-no">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="tel" placeholder="Mobile">
+            </div>
+            <div class="error error-txt">Invalid mobile number</div>
+        </div>
+        <div class="field gender">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Gender">
+            </div>
+            <div class="error error-txt">Gender can't be blank</div>
+        </div>
+        <div class="field password">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="error error-txt">Invalid Password Format</div>
+        </div>
+        <input type="submit" id="register-button" value="Register">
+    </form>
+</div>
+<script src="../static/js/adminReg.js" th:src="@{/js/adminReg.js}"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Registration</title>
+    <link rel="stylesheet" href="../static/css/custregistration_style.css" type="text/css" th:href="@{/custregistration_style.css}" media="all">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+<div class="wrapper">
+    <header>Customer Registration</header>
+    <form th:action="@{/admin}" class="form" method="post">
+        <div class="field customerID">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="CustomerID">
+            </div>
+            <div class="error error-txt">CustomerID can't be blank</div>
+        </div>
+        <div class="field name">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="error error-txt">Name can't be blank</div>
+        </div>
+        <div class="field father-name">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Father Name">
+            </div>
+            <div class="error error-txt">Father Name can't be blank</div>
+        </div>
+        <div class="field dob">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="date" placeholder="D.O.B">
+            </div>
+            <div class="error error-txt">Date can't be blank</div>
+        </div>
+        <div class="field gender">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Gender">
+            </div>
+            <div class="error error-txt">Gender can't be blank</div>
+        </div>
+        <div class="field perm-address">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Permanent Address">
+            </div>
+            <div class="error error-txt">Address can't be blank</div>
+        </div>
+        <div class="field pres-address">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Present Address">
+            </div>
+            <div class="error error-txt">Address can't be blank</div>
+        </div>
+        <div class="field pan">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="PAN">
+            </div>
+            <div class="error error-txt">PAN can't be blank</div>
+        </div>
+        <div class="field mobile-no">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="tel" placeholder="Mobile Number">
+            </div>
+            <div class="error error-txt">Invalid mobile number</div>
+        </div>
+        <div class="field landline-no">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="tel" placeholder="Telephone Number">
+            </div>
+            <div class="error error-txt">Invalid landline number</div>
+        </div>
+        <div class="field account-type">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Account Type">
+            </div>
+            <div class="error error-txt">Invalid Account Type</div>
+        </div>
+        <div class="field balance">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="number" placeholder="Opening Balance">
+            </div>
+            <div class="error error-txt">Opening balance can't be empty</div>
+        </div>
+        <div class="field account-number">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Account Number">
+            </div>
+            <div class="error error-txt">Invalid Account Number</div>
+        </div>
+        <div class="field card-number">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="text" placeholder="Card Number">
+            </div>
+            <div class="error error-txt">Invalid Card Number</div>
+        </div>
+        <div class="field password">
+            <div class="input-area">
+                <!--suppress HtmlFormInputWithoutLabel -->
+                <input type="password" placeholder="Password">
+            </div>
+            <div class="error error-txt">Invalid Password Format</div>
+        </div>
+        <input type="submit" id="register-button" value="Register">
+    </form>
+</div>
+<script src="../static/js/custReg.js" th:src="@{/js/custReg.js}"></script>
+</body>
+</html>

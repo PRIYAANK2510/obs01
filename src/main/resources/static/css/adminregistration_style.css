@@ -21,7 +21,7 @@ body{
 }
 .wrapper{
     width: 380px;
-    padding: 40px 30px 50px 30px;
+    padding: 20px 20px 20px 20px;
     background: #fff;
     border-radius: 5px;
     text-align: center;
@@ -61,7 +61,7 @@ form input{
     width: 100%;
     height: 100%;
     outline: none;
-    padding: 0 45px;
+    padding: 0 8px;
     font-size: 18px;
     background: none;
     caret-color: #5372F0;
@@ -85,23 +85,6 @@ form .field.error input{
     pointer-events: none;
     transform: translateY(-50%);
 }
-.input-area .icon{
-    left: 15px;
-    color: #bfbfbf;
-    transition: color 0.2s ease;
-}
-.input-area .error-icon{
-    right: 15px;
-    color: #dc3545;
-}
-form input:focus ~ .icon,
-form .field.valid .icon{
-    color: #5372F0;
-}
-form .field.shake input:focus ~ .icon,
-form .field.error input:focus ~ .icon{
-    color: #bfbfbf;
-}
 form input::placeholder{
     color: #bfbfbf;
     font-size: 17px;
@@ -120,7 +103,7 @@ form .field.error .error{
 }
 form .pass-txt{
     text-align: left;
-    margin-top: -10px;
+    margin-top: 5px;
 }
 .wrapper a{
     color: #5372F0;
@@ -131,7 +114,7 @@ form .pass-txt{
 }
 form input[type="submit"]{
     height: 50px;
-    margin-top: 30px;
+    margin-top: 5px;
     color: #fff;
     padding: 0;
     border: none;

@@ -20,16 +20,27 @@ public class RegistrationController {
     @Autowired
     private AdminService adminService;
 
-
-    @PostMapping("/register_customer")
-    public String registerCustomer(@RequestBody CustomerModel customerModel){
-        CustomerAccountDetails customer = customerService.registerCustomer(customerModel);
-        return "Success";
+    @GetMapping("/RegisterCustomer")
+    public String RegisterCustomer()
+    {
+        return "RegisterCustomer";
     }
 
-    @PostMapping("/register_admin")
+    @GetMapping("/RegisterAdmin")
+    public String RegisterAdmin()
+    {
+        return "RegisterAdmin";
+    }
+
+    @PostMapping("/RegisterCustomer")
+    public String registerCustomer(@RequestBody CustomerModel customerModel){
+        CustomerAccountDetails customer = customerService.registerCustomer(customerModel);
+        return "success";
+    }
+
+    @PostMapping("/RegisterAdmin")
     public String registerAdmin(@RequestBody AdminModel adminModel){
         AdminAccountDetails admin = adminService.registerAdmin(adminModel);
-        return "Success";
+        return "success";
     }
 }

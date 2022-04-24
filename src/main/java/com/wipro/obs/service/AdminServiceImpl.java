@@ -6,7 +6,6 @@ import com.wipro.obs.model.AdminModel;
 import com.wipro.obs.repository.AdminAccountDetailsRepository;
 import com.wipro.obs.repository.UserCredentialsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -18,8 +17,7 @@ public class AdminServiceImpl implements AdminService{
     @Autowired
     private UserCredentialsRepository userCredentialsRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+
     @Override
     public AdminAccountDetails registerAdmin(AdminModel adminModel) {
         AdminAccountDetails adminAccountDetails = new AdminAccountDetails();
@@ -32,7 +30,7 @@ public class AdminServiceImpl implements AdminService{
 
         userCredentials.setUserId(adminModel.getAdminId());
         userCredentials.setUserType("ADMIN");
-        userCredentials.setPassword(passwordEncoder.encode(adminModel.getPassword()));
+        userCredentials.setPassword(adminModel.getPassword());
 
         userCredentialsRepository.save(userCredentials);
         adminAccountDetailsRepository.save(adminAccountDetails);
