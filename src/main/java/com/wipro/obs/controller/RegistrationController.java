@@ -35,12 +35,12 @@ public class RegistrationController {
     @PostMapping("/RegisterCustomer")
     public String registerCustomer(@RequestBody CustomerModel customerModel){
         CustomerAccountDetails customer = customerService.registerCustomer(customerModel);
-        return "success";
+        return "AdminDashboard";
     }
 
     @PostMapping("/RegisterAdmin")
     public String registerAdmin(@RequestBody AdminModel adminModel){
         AdminAccountDetails admin = adminService.registerAdmin(adminModel);
-        return "success";
+        return "AdminDashboard";
     }
 }
